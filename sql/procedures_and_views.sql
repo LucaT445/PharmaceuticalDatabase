@@ -1,4 +1,4 @@
-USE PharmaDB;
+USE pharmadb;
 
  /*
      Business Requirement #1
