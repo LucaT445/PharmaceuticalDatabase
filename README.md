@@ -8,7 +8,6 @@
 - Example analytics queries (CTEs, window functions)
 - Reproducible setup (schema + seed scripts; Docker optional)
 
-```markdown
 ## Structure
 - `/sql` — schema, seed data, procedures/views
 - `/docs` — ERD/EER diagrams
@@ -16,11 +15,9 @@
 
 ## Quickstart (MySQL)
 ```bash
-# start MySQL (if you added docker-compose.yml)
-docker compose up -d
 
 # load schema, seed, then procedures/views
-mysql -h 127.0.0.1 -P 3306 -u root -proot < sql/schema.sql
-mysql -h 127.0.0.1 -P 3306 -u root -proot pharmadb < sql/seed_data.sql
-mysql -h 127.0.0.1 -P 3306 -u root -proot pharmadb < sql/procedures_and_views.sql
+mysql -h 127.0.0.1 -u root -p < sql/schema.sql
+mysql -h 127.0.0.1 -u root -p pharmadb < sql/seed_data.sql
+mysql -h 127.0.0.1 -u root -p pharmadb < sql/procedures_and_views.sql
 ```
